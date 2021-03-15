@@ -1,5 +1,6 @@
 export function intro() {
-  const container = document.getElementById('content')
+  const container = document.getElementById('content').appendChild(document.createElement('div'))
+  container.classList.add('nav-content')
   const section = container.appendChild(document.createElement('section'))
   section.classList.add('intro', 'relative', 'text-white')
   const h1 = section.appendChild(document.createElement('h1'))
@@ -24,7 +25,7 @@ export function intro() {
 }
 
 export function cardSection() {
-  const container = document.getElementById('content')
+  const container = document.getElementsByClassName('nav-content')[0]
   const section = container.appendChild(document.createElement('div'))
   section.classList.add('h-screen', 'bg-dark', 'px-32', 'flex', 'xy-center', 'relative')
   const card = section.appendChild(document.createElement('div'))
