@@ -1,0 +1,180 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: 'Lato', sans-serif;
+}
+
+/* General */
+
+.flex{
+  display: flex;
+}
+
+.grid{
+  display: grid;
+}
+
+.xy-center{
+  justify-content: center;
+  align-items: center;
+}
+
+.y-center {
+  /* justify-content: center; */
+}
+
+.text-white {
+  color: white;
+}
+
+.screen-height{
+  height: 100vh;
+}
+
+.bg-dark{
+  background: #0f0f0f;
+}
+
+.bg-white{
+  background: white;
+}
+
+.object-cover{
+  object-fit: cover;
+}
+
+/* .relative{
+  position: relative;
+} */
+
+/* .absolute{
+  position: absolute;
+} */
+
+/* .w-full{
+  width: 100%;
+}
+
+.h-full{
+  height: 100%;
+}
+
+.px-8{
+  padding: 0 8rem;
+}
+
+.px-6{
+  padding-left: 6rem;
+  padding-right: 6rem;
+}
+
+.py-4{
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+} */
+
+/* Layout */
+
+.intro {
+  /* font-family: 'Adine', sans-serif;
+  font-weight: 100; */
+}
+
+.card{
+    
+}
+
+@media only screen and (min-width: 1024px) {
+
+  /* Layout */
+  .intro {
+    width: 100%;
+  }
+
+  .intro h1{
+    font-size: 144px;
+    position: absolute;
+    top: 40%;
+    left: 12%;
+    transform: translate(-10%, -40%);
+    font-weight: 100;
+  font-family: 'Great Vibes', sans-serif;
+  }
+
+  .intro h2{
+    font-size: 40px;
+    position: absolute;
+    top: 60%;
+    left: 12%;
+    transform: translate(-10%, -60%);
+    font-family: 'Petit Formal Script', sans-serif;
+  }
+
+  #dish {
+    position: absolute;
+    top: 16%;
+    right: 12%;
+    height: auto;
+    width: auto;
+    /* max-width: 500px; */
+    /* transform: translate(-8%, -40%) rotate(90deg); */
+  }
+
+
+  #rosemary1{
+    position: absolute;
+    bottom: 7%;
+    right: 45%;
+    height: auto;
+    width: auto;
+    /* max-width: 80px; */
+    /* transform: translate(-40%, -1%) rotate(-90deg); */
+  }
+
+  #tomatoes{
+    position: absolute;
+    bottom: 12%;
+    right: 43%;
+    height: auto;
+    width: auto;
+    /* max-width: 146px; */
+    /* transform: translate(-38%, -10%) rotate(90deg); */
+  }
+
+  #onions{
+    position: absolute;
+    top: 28%;
+    right: 44%;
+    height: auto;
+    width: auto;
+    /* max-width: 160px; */
+    /* transform: translate(-5%, -8%) rotate(45deg); */
+  }
+
+  #garlic{
+    position: absolute;
+    top: 40%;
+    right: 9%;
+    height: auto;
+    width: auto;
+    /* max-width: 60px; */
+    /* transform: translate(-5%, -8%) rotate(45deg); */
+  }
+
+  #thyme{
+    right: 10%;
+    bottom: -20%;
+    scale: 1.2;
+    /* transform: scaleX(-1); */
+  }
+
+  .card{
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    /* color: #b8860b; */
+  }
+}
