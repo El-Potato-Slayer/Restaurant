@@ -1,7 +1,7 @@
 export function intro() {
   const container = document.getElementById('content')
   const section = container.appendChild(document.createElement('section'))
-  section.classList.add('intro', 'h-screen', 'relative', 'bg-dark', 'text-white')
+  section.classList.add('intro', 'relative', 'text-white')
   const h1 = section.appendChild(document.createElement('h1'))
   h1.innerHTML = 'Le Poes'
   const h2 = section.appendChild(document.createElement('h2'))
