@@ -2,6 +2,11 @@ export function updateContent() {
   const navLinks = document.querySelectorAll('.nav-link') 
   const pages = document.querySelectorAll('.nav-content')
   
+  displayContentOnLoad(pages)
+  displayContentOnClick(navLinks, pages)
+}
+
+function displayContentOnClick(navLinks, pages) {
   navLinks.forEach((navLink, index) => {
     navLink.addEventListener('click', () => {
       
@@ -18,5 +23,15 @@ export function updateContent() {
       pages[index].classList.remove('hidden')
       pages[index].classList.add('block')
     })
+  })
+}
+
+function displayContentOnLoad(pages) {
+  document.addEventListener('DOMContentLoaded', () => {
+    pages.forEach(page => {
+      page.classList.add('hidden')
+    })
+    pages[0].classList.remove('hidden')
+    pages[0].classList.add('block')
   })
 }

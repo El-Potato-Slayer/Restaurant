@@ -7,4 +7,5 @@ intro()
 cardSection()
 parallax()
 menu()
+
 updateContent()
