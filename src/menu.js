@@ -7,14 +7,14 @@ let menuItems = [
 
 export function menu() {
   const container = document.getElementById('content').appendChild(document.createElement('div'))
-  container.classList.add('nav-content')
+  container.classList.add('nav-content', 'menu')
   createMenuItems(container, menuItems)
 }
 
 function createMenuItems(container, menu) {
   menu.forEach(menuItem => {
     const row = container.appendChild(document.createElement('div'))
-    row.classList.add('menu', 'grid', 'grid-cols-2', 'items-center', 'px-60', 'pb-20')
+    row.classList.add('menu-item', 'grid', 'grid-cols-2', 'items-center', 'px-60', 'pb-20')
     const menuText = row.appendChild(document.createElement('div'))
     menuText.classList.add('menu-text', 'text-white', 'flex', 'flex-col', 'justify-center')
     const title = menuText.appendChild(document.createElement('h4'))

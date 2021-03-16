@@ -13,10 +13,20 @@ export function parallax() {
     rosemary.style.transform = `translateY(${scroll * -0.6}px)`
     thyme.style.transform = `translate(0, ${scroll * -0.3}px) rotate(20deg)`
 
-    
-    const menuItems = document.querySelectorAll('.menu-picture img')
-    for (let i = 0; i < menuItems.length; i++) {
-      menuItems[i].style.transform = `rotate(${scroll * 0.1}deg)`
+    // let scroll = document.querySelector('.menu')
+    // console.log(scroll);
+    const menu = document.querySelectorAll('.menu-picture img')
+    // console.log(menu);
+    for (let i = 0; i < menu.length; i++) {
+      menu[i].style.transform = `rotate(${scroll * 0.1}deg)`
+    }
+  })
+
+  let menu = document.querySelector('.menu')
+  menu.addEventListener('scroll', () => {
+    const menuPictures = document.querySelectorAll('.menu-picture img')
+    for (let i = 0; i < menuPictures.length; i++) {
+      menuPictures[i].style.transform = `rotate(${menu.scrollTop * 0.1}deg)`
     }
   })
 }

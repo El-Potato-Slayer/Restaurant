@@ -1,11 +1,12 @@
 import { intro, cardSection} from './homepage'
 import { menu } from './menu'
+import { contact } from './contact'
 import { parallax } from './parallax'
 import { updateContent } from './tab'
 
 intro()
 cardSection()
-parallax()
 menu()
-
+contact()
 updateContent()
+parallax()

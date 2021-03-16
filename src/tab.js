@@ -1,5 +1,5 @@
 export function updateContent() {
-  const navLinks = document.querySelectorAll('.nav-link') 
+  const navLinks = document.querySelectorAll('nav div p') 
   const pages = document.querySelectorAll('.nav-content')
   
   displayContentOnLoad(pages)
@@ -21,7 +21,7 @@ function displayContentOnClick(navLinks, pages) {
       navLink.classList.add('active-link')
   
       pages[index].classList.remove('hidden')
-      pages[index].classList.add('block')
+      // pages[index].classList.add('block')
     })
   })
 }
