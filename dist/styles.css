@@ -28,6 +28,64 @@ body{
 }
 
 /* Layout */
+#hamburger-wrapper {
+  /* border: 2px solid white; */
+  width: 2rem;
+  height: 2rem;
+  position: relative;
+}
+
+#hamburger,
+#hamburger::before,
+#hamburger::after{
+  width: 1.75rem;
+  height: 0.125rem;
+  background: white;
+  content: "";
+  transition: all 0.3s ease-in-out;
+}
+
+#hamburger{
+  top: 50%;
+  /* left: 50%; */
+  transform: translateY(-50%);
+}
+
+#hamburger::before{
+  position: absolute;
+  left: 0;
+  top: -0.625rem;
+  /* transform: translateX(-50%); */
+}
+
+#hamburger::after{
+  position: absolute;
+  left: 0;
+  top: 0.625rem;
+  /* transform: translateX(-50%); */
+}
+
+/* Animations */
+
+#hamburger.open{
+  left: -50%;
+  background: transparent;
+}
+
+#hamburger.open::before{
+  left: 0;
+  top: 50%;
+  width: 100%;
+  transform: rotate(45deg);
+}
+
+#hamburger.open::after{
+  left: 0;
+  top: 50%;
+  width: 100%;
+  transform: rotate(-45deg);
+}
+
 #content {
   overflow: hidden;
 }
