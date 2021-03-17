@@ -1,11 +1,12 @@
 export function parallax() {
-  window.addEventListener('scroll', () => {
+  let intro = document.querySelector('.intro')
+  intro.addEventListener('scroll', () => {
     const dish = document.getElementById('dish')
     const onions = document.getElementById('onions')
     const tomatoes = document.getElementById('tomatoes')
     const rosemary = document.getElementById('rosemary1')
     const thyme = document.getElementById('thyme')
-    let scroll = window.pageYOffset;
+    let scroll = intro.scrollTop;
   
     dish.style.transform = `translateY(${scroll * -0.85}px)`
     onions.style.transform = `translateY(${scroll * -0.4}px)`
@@ -13,13 +14,6 @@ export function parallax() {
     rosemary.style.transform = `translateY(${scroll * -0.6}px)`
     thyme.style.transform = `translate(0, ${scroll * -0.3}px) rotate(20deg)`
 
-    // let scroll = document.querySelector('.menu')
-    // console.log(scroll);
-    const menu = document.querySelectorAll('.menu-picture img')
-    // console.log(menu);
-    for (let i = 0; i < menu.length; i++) {
-      menu[i].style.transform = `rotate(${scroll * 0.1}deg)`
-    }
   })
 
   let menu = document.querySelector('.menu')

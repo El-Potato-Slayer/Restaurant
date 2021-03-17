@@ -45,6 +45,8 @@ function createContactField(container, label, inputField, type) {
     wrapperInput.type = type
   }
   else if (inputField === 'textarea') {
-    wrapperInput.classList.add('h-40')
+    wrapperInput.classList.add('h-40');
+    wrapperInput.setAttribute('data-gramm_editor', false)
   }
+  return wrapperInput
 }

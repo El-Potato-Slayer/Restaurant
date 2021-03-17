@@ -10,37 +10,13 @@ body{
 
 /* General */
 
-.flex{
-  display: flex;
-}
-
-.grid{
-  display: grid;
-}
-
 .xy-center{
   justify-content: center;
   align-items: center;
 }
 
-.y-center {
-  /* justify-content: center; */
-}
-
-.text-white {
-  color: white;
-}
-
-.screen-height{
-  height: 100vh;
-}
-
 .bg-dark{
   background: #0f0f0f;
-}
-
-.bg-white{
-  background: white;
 }
 
 .object-cover{
@@ -52,11 +28,19 @@ body{
 }
 
 /* Layout */
+#content {
+  overflow: hidden;
+}
 
 .intro {
   background: url(./assets/images/bg.jpg);
   background-size: cover;
   background-position: center;
+  overflow-y: auto;
+}
+
+.reduced-screen-height{
+  height: calc(100vh - 4.5rem);
 }
 
 .menu {
@@ -64,7 +48,11 @@ body{
   background-size: cover;
   background-position: center;
   height: calc(100vh - 4.5rem);
+  position: fixed;
   overflow-y: auto;
+}
+#content{
+  /* overflow-y: scroll; */
 }
 
 .contact {

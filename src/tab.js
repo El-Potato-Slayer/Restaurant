@@ -21,7 +21,6 @@ function displayContentOnClick(navLinks, pages) {
       navLink.classList.add('active-link')
   
       pages[index].classList.remove('hidden')
-      // pages[index].classList.add('block')
     })
   })
 }
@@ -32,6 +31,5 @@ function displayContentOnLoad(pages) {
       page.classList.add('hidden')
     })
     pages[0].classList.remove('hidden')
-    pages[0].classList.add('block')
   })
 }
