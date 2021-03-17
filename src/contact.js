@@ -2,7 +2,7 @@ export function contact() {
   const container = document.getElementById('content').appendChild(document.createElement('div'))
   container.classList.add('nav-content', 'contact')
   const wrapper = container.appendChild(document.createElement('section'))
-  wrapper.classList.add('text-white', 'flex', 'flex-col', 'justify-center', 'items-center', 'bg-semi-dark', 'w-3/6', 'mx-auto', 'py-16')
+  wrapper.classList.add('text-white', 'flex', 'flex-col', 'justify-center', 'items-center', 'bg-semi-dark', 'max-w-2xl', 'mx-auto', 'py-16')
   const firstTitle = wrapper.appendChild(document.createElement('h2'))
   firstTitle.classList.add('text-4xl', 'pb-8')
   firstTitle.innerHTML = "Contact Us"
@@ -10,8 +10,8 @@ export function contact() {
   createContactInformation(wrapper, 'Phone', '+33 1 48 24 55 69')
   createContactInformation(wrapper, 'Email', 'info@lepoes.com')
   const secondTitle = wrapper.appendChild(document.createElement('h3'))
-  secondTitle.classList.add('text-4xl', 'pb-4', 'pt-16')
-  secondTitle.innerHTML = 'Want Us To Contact You?'
+  secondTitle.classList.add('text-3xl', 'sm:text-4xl', 'pb-4', 'pt-16')
+  secondTitle.innerHTML = 'Have A Question?'
   const contactForm = wrapper.appendChild(document.createElement('div'))
   contactForm.classList.add('flex', 'flex-col')
   createContactField(contactForm, 'Full Name', 'input', 'text')
