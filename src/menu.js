@@ -6,29 +6,32 @@ let menuItems = [
 ]
 
 export function menu() {
-  const container = document.getElementById('content').appendChild(document.createElement('div'))
-  container.classList.add('nav-content', 'menu')
-  createMenuItems(container, menuItems)
+  const container = document.getElementById('content').appendChild(document.createElement('main'))
+  container.classList.add('nav-content', 'menu', 'px-8', 'sm:px-16', 'py-16', 'w-full')
+  const menuWrapper = container.appendChild(document.createElement('div'))
+  menuWrapper.classList.add('max-w-3xl', 'mx-auto')
+  createMenuItems(menuWrapper, menuItems)
 }
 
 function createMenuItems(container, menu) {
   menu.forEach(menuItem => {
-    const row = container.appendChild(document.createElement('div'))
-    row.classList.add('menu-item', 'grid', 'grid-cols-2', 'items-center', 'px-60', 'pb-20')
-    const menuText = row.appendChild(document.createElement('div'))
-    menuText.classList.add('menu-text', 'text-white', 'flex', 'flex-col', 'justify-center')
-    const title = menuText.appendChild(document.createElement('h4'))
-    title.classList.add('text-4xl', 'mb-8')
+    const row = container.appendChild(document.createElement('section'))
+    row.classList.add('menu-item', 'grid', 'grid-cols-1', 'text-center', 'sm:text-left', 'sm:grid-cols-2', 'items-center', 'pb-20')
+    const menuTextWrapper = row.appendChild(document.createElement('div'))
+    menuTextWrapper.classList.add('menu-text', 'mb-8', 'sm:mb-0', 'text-white', 'flex', 'flex-col', 'justify-center')
+    const title = menuTextWrapper.appendChild(document.createElement('h4'))
+    title.classList.add('text-3xl', 'lg:text-4xl', 'font-bold', 'mb-8')
     title.innerHTML = `${menuItem.title}`
-    const description = menuText.appendChild(document.createElement('p'))
+    const description = menuTextWrapper.appendChild(document.createElement('p'))
+    description.classList.add('text-left')
     description.innerHTML = `${menuItem.description}`
-    const price = menuText.appendChild(document.createElement('p'))
-    price.classList.add('font-bold', 'text-lg', 'text-gray-300', 'mt-8')
+    const price = menuTextWrapper.appendChild(document.createElement('p'))
+    price.classList.add('font-bold', 'text-lg', 'text-gray-200', 'mt-8')
     price.innerHTML = `Price: ${menuItem.price}`
     const imgContainer = row.appendChild(document.createElement('div'))
     imgContainer.classList.add('menu-picture', 'flex', 'justify-center')
     const img = imgContainer.appendChild(document.createElement('img'))
-    img.classList.add('w-3/6', 'h-full')
+    img.classList.add('w-60', 'h-full')
     img.src = `${menuItem.image}`
   })
   // for (let i = 0; i < 4; i++) {
