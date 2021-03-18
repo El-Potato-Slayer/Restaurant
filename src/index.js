@@ -1,11 +1,13 @@
-import { setHamburgerState } from './navbar'
+import { Hamburger } from './navbar'
 import { intro, cardSection} from './homepage'
 import { menu } from './menu'
 import { contact } from './contact'
 import { parallax } from './parallax'
 import { updateContent } from './tab'
 
-setHamburgerState()
+// setHamburgerState()
+
+
 intro()
 cardSection()
 menu()

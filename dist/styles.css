@@ -50,8 +50,6 @@ body{
   height: 2rem;
   position: relative;
   z-index: 2;
-  /* display: flex;
-  align-items: ; */
 }
 
 #hamburger,
@@ -76,14 +74,14 @@ body{
   position: absolute;
   left: 0;
   top: -0.625rem;
-  /* transform: translateX(-50%); */
+  transform: translateY(50%);
 }
 
 #hamburger::after{
   position: absolute;
   left: 0;
   top: 0.625rem;
-  /* transform: translateX(-50%); */
+  transform: translateY(-50%);
 }
 
 
