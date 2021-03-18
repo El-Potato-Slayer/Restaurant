@@ -1,3 +1,5 @@
+import { setHamburgerState } from "./navbar"
+
 export function updateContent() {
   const navLinks = document.querySelectorAll('nav div p') 
   const pages = document.querySelectorAll('.nav-content')
@@ -21,6 +23,10 @@ function displayContentOnClick(navLinks, pages) {
       navLink.classList.add('active-link')
   
       pages[index].classList.remove('hidden')
+      // hamburger.classList.remove('open')
+      // document.querySelector('.nav-links').style.top = '-6.5rem'
+      // let isOpen = false
+      // setHamburgerState()
     })
   })
 }

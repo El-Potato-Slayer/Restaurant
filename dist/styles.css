@@ -28,11 +28,28 @@ body{
 }
 
 /* Layout */
+
+.nav-links{
+  position: absolute;
+  left: 0;
+  width: 100vw;
+  background: #0f0f0f;
+  transition: top 0.3s ease-in-out;
+  top: -6.5rem;
+  z-index: 1;
+  /* z-index: -1; */
+}
+
+.nav-links p {
+  z-index: 2;
+}
+
 #hamburger-wrapper {
   /* border: 2px solid white; */
   width: 2rem;
   height: 2rem;
   position: relative;
+  z-index: 2;
 }
 
 #hamburger,
@@ -65,26 +82,7 @@ body{
   /* transform: translateX(-50%); */
 }
 
-/* Animations */
 
-#hamburger.open{
-  left: -50%;
-  background: transparent;
-}
-
-#hamburger.open::before{
-  left: 0;
-  top: 50%;
-  width: 100%;
-  transform: rotate(45deg);
-}
-
-#hamburger.open::after{
-  left: 0;
-  top: 50%;
-  width: 100%;
-  transform: rotate(-45deg);
-}
 
 #content {
   overflow: hidden;
@@ -142,6 +140,7 @@ body{
 
 #logo {
   color: #b8860b;
+  z-index: 2;
 }
 
 .active-link{
@@ -157,7 +156,30 @@ body{
 
 }
 
+/* Animations */
+
+#hamburger.open{
+  left: -50%;
+  background: transparent;
+}
+
+#hamburger.open::before{
+  left: 0;
+  top: 50%;
+  width: 100%;
+  transform: rotate(45deg);
+}
+
+#hamburger.open::after{
+  left: 0;
+  top: 50%;
+  width: 100%;
+  transform: rotate(-45deg);
+}
+
 @media only screen and (min-width: 640px) {
+
+  
   .intro h1{
     font-size: 6rem;
   }
@@ -184,6 +206,12 @@ body{
 }
 
 @media only screen and (min-width: 768px) {
+  .nav-links{
+    position: static;
+    width: auto;
+    background: inherit;
+  }
+  
   .intro h1{
     font-size: 7rem;
   }
