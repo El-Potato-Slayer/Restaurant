@@ -50,6 +50,8 @@ body{
   height: 2rem;
   position: relative;
   z-index: 2;
+  /* display: flex;
+  align-items: ; */
 }
 
 #hamburger,
@@ -60,6 +62,8 @@ body{
   background: white;
   content: "";
   transition: all 0.3s ease-in-out;
+  margin: 0 auto;
+
 }
 
 #hamburger{
